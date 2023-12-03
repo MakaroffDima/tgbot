@@ -16,4 +16,5 @@ public class StatsService {
         return statsRepository.getCountOfIncomesThatGreaterThan(amount);
 
     }
+
 }

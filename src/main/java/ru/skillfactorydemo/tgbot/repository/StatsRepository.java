@@ -16,4 +16,5 @@ public class StatsRepository {
         return jdbcTemplate.queryForObject("SELECT count(*) FROM INCOMES WHERE income > ?" ,Integer.class, amount);
 
     }
+
 }
