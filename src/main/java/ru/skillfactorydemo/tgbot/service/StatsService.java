@@ -16,5 +16,9 @@ public class StatsService {
         return statsRepository.getCountOfIncomesThatGreaterThan(amount);
 
     }
+    public int getCountOfIncomesThatGreaterOnDate(Long amount) {
+        return statsRepository.getCountOfIncomesThatGreaterThanOnDate(amount);
+
+    }
 
 }

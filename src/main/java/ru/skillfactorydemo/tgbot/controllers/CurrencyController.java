@@ -37,4 +37,9 @@ public class CurrencyController {
     public int getStatsAboutIncomesThatGreater(@RequestParam(value = "amount") BigDecimal amount) {
         return statsService.getCountOfIncomesThatGreater(amount);
     }
+    @GetMapping("/getStatsOnDate")
+    @ApiOperation(value = "Получение количества пополнений, которые превышают определенную сумму в разрезе даты")
+    public int getStatsAboutIncomesThatGreaterOnDate(@RequestParam(value = "amount") Long amount) {
+        return statsService.getCountOfIncomesThatGreaterOnDate(amount);
+    }
 }
