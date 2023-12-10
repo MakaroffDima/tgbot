@@ -8,6 +8,9 @@ import ru.skillfactorydemo.tgbot.repository.IncomeRepository;
 import ru.skillfactorydemo.tgbot.repository.SpendRepository;
 
 import java.math.BigDecimal;
+import java.util.Date;
+
+import static java.time.LocalTime.now;
 
 @Service
 @RequiredArgsConstructor
@@ -25,12 +28,14 @@ public class FinanceService {
             Income income = new Income();
             income.setChatId(chatId);
             income.setIncome(new BigDecimal(price));
+            income.setDate(new Date());
             incomeRepository.save(income);
             message = "Доход в размере " + price + " был успешно добавлен";
         } else {
             Spend spend = new Spend();
             spend.setChatId(chatId);
             spend.setSpend(new BigDecimal(price));
+            spend.setDate(new Date());
             spendRepository.save(spend);
             message = "Расход в размере " + price + " был успешно добавлен";
         }
