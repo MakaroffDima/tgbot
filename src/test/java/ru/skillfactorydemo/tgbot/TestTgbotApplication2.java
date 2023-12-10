@@ -6,10 +6,10 @@ import org.springframework.boot.test.context.TestConfiguration;
 
 
 @TestConfiguration(proxyBeanMethods = false)
-public class TestTgbotApplication {
+public class TestTgbotApplication2 {
 
 	public static void main(String[] args) {
-		SpringApplication.from(TgbotApplication2::main).with(TestTgbotApplication.class).run(args);
+		SpringApplication.from(TgbotApplication2::main).with(TestTgbotApplication2.class).run(args);
 	}
 
 }
